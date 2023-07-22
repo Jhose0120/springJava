@@ -25,7 +25,7 @@ public class PizzaController {
                                                     @RequestParam(defaultValue = "8")int elements){
         return ResponseEntity.ok(this.pizzaService.getAll(page, elements));
     }
-
+    //@CrossOrigin(origins = "http://localhost:4200") add after getmappin in case that we only required this service
     @GetMapping("/available")
     public ResponseEntity<Page<PizzaEntity>> getAvailable(@RequestParam(defaultValue = "0") int page,
                                                           @RequestParam(defaultValue = "8") int elements,
